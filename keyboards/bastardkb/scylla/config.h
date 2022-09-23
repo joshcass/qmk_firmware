@@ -18,6 +18,21 @@
 
 #pragma once
 
+#include "config_common.h"
+
+/* Key matrix configuration. */
+#define MATRIX_ROWS 10 // Rows are doubled-up.
+#define MATRIX_COLS 6
+
+#define DIODE_DIRECTION ROW2COL
+
+/* Set 0 if debouncing isn't needed. */
+#define DEBOUNCE 5
+
+/* custom settings for tap/hold */
+#define HOLD_ON_OTHER_KEY_PRESS
+#define IGNORE_MOD_TAP_INTERRUPT
+
 /* RGB settings. */
 #define RGBLED_NUM 58
 #define RGBLED_SPLIT \
