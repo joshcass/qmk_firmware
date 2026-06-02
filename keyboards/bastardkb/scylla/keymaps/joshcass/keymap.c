@@ -11,7 +11,7 @@ enum {
     TD_UP_PSCR,
 };
 
-void dance_up_scrot(qk_tap_dance_state_t *state, void *user_data) {
+void dance_up_scrot(tap_dance_state_t *state, void *user_data) {
     switch (state->count) {
         case 1:
             tap_code(KC_UP);
@@ -25,7 +25,7 @@ void dance_up_scrot(qk_tap_dance_state_t *state, void *user_data) {
     }
 }
 
-qk_tap_dance_action_t tap_dance_actions[] = {
+tap_dance_action_t tap_dance_actions[] = {
     [TD_DOWN_DEL] = ACTION_TAP_DANCE_DOUBLE(KC_DOWN, KC_DEL),
     [TD_UP_PSCR]  = ACTION_TAP_DANCE_FN(dance_up_scrot),
 };
