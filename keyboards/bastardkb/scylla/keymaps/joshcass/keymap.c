@@ -33,6 +33,8 @@ tap_dance_action_t tap_dance_actions[] = {
 bool get_hold_on_other_key_press(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
         case QK_LAYER_TAP ... QK_LAYER_TAP_MAX:
+        case RCTL_T(KC_ESC):
+        case RALT_T(KC_BSLS):
             return true;
         default:
             return false;
